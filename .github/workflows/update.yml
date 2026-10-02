@@ -29,8 +29,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "ninja@ninjastrikers.net"
-          git config --local user.name "Ninjastrikers"
+          git config --local user.name "szzzc1288"
+          git config --local user.email "138572753+szzzc1288@users.noreply.github.com"
           git add configs/ docs/
           git commit -m "Auto-updated configs and website stats" || echo "No changes to commit"
           git pull --rebase origin main
