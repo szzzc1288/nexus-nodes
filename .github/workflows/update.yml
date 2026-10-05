@@ -35,3 +35,11 @@ jobs:
           git commit -m "Auto-updated configs and website stats" || echo "No changes to commit"
           git pull --rebase origin main
           git push
+
+      - name: 删除运行的工作流
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+         token: ${{ secrets.delete  }}
+         repository: ${{ github.repository }}
+         retain_days: 1
+         keep_minimum_runs: 6
